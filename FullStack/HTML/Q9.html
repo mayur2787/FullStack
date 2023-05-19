@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 style="color: rgb(7, 69, 110);">Registration Form for Examination</h1>
+    <form action="">
+        <fieldset style="width: 40%;">
+            <legend style="font-weight: bolder;color: rgb(7, 69, 110);">Registration</legend>
+                <section style="width: 45%; display: inline-block;color: rgb(7, 69, 110);">
+                    <label for="type" style="font-weight: bold;">Registration Type <span style="color: red;">*</span></label><br>
+                    <select name="type" id="type" style="width: 200px;">
+                        <option value="">Select</option>
+                        <option value="Regular">Regular</option>
+                        <option value="Special">Special</option>
+                    </select>
+                </section>
+                <section style="width: 45%; display: inline-block;color: rgb(7, 69, 110);">
+                    <label for="year" style="font-weight: bold;">Registration Year <span style="color: red;">*</span></label><br>
+                    <select name="type" id="year" style="width: 200px;">
+                        <option value="">Select</option>
+                        <option value="2019">2019</option>
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                    </select>
+            </section><br><br>
+            <section style="color: rgb(7, 69, 110);">
+                <label for="name">Name:<span style="color: red;">*</span></label><br>
+                <span style=""><input type="text" size="73" id="name"></span>
+            </section><br>
+            <section style="color: rgb(7, 69, 110);">
+                <label for="regis">Registration No.:<span style="color: red;">*</span></label><br>
+                <span style=""><input type="text" size="30" id="regis"></span>
+            </section><br>
+            <section style="color: rgb(7, 69, 110);">
+                <label for="email">E-Mail Id:<span style="color: red;">*</span></label><br>
+                <span style=""><input type="email" size="73" id="email"></span>
+            </section><br>
+            <section style="color: rgb(7, 69, 110);">
+                <label for="mobile">Mobile No.:<span style="color: red;">*</span></label><br>
+                <span style=""><input type="text" size="73" id="mobile"></span>
+            </section><br>
+        </fieldset><br>
+        <section>
+            <input type="reset" value="Cancel">
+            <input type="submit" value="Sign Up">
+        </section>
+
+    </form>
+</body>
+
+</html>
