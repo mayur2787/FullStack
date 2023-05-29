@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        thead th,
+        td {
+            padding: 0.3em;
+        }
+
+        tbody tr:nth-child(odd) {
+            background: rgb(231, 229, 229);
+        }
+
+        tbody tr th {
+            text-align: left;
+        }
+
+        div {
+            width: 50%;
+            margin: auto;
+        }
+        .number{
+            text-align: right;
+        }
+        table{
+            border:1px solid silver;
+        }
+        tfoot{
+            border-top:1px solid silver;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <table>
+            <caption>A summary of the UK's most famous punk bands</caption>
+            <thead>
+                <th>Band</th>
+                <th class="number">Year Formed</th>
+                <th class="number">Number of Albums</th>
+                <th>Most famous song</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Buzzcocks</th>
+                    <td class="number">1976</td>
+                    <td class="number">9</td>
+                    <td>Ever fallen in love</td>
+                </tr>
+                <tr>
+                    <th>The Clash</th>
+                    <td class="number">1976</td>
+                    <td class="number">6</td>
+                    <td>London Calling</td>
+                </tr>
+                <tr>
+                    <th>The Damned</th>
+                    <td class="number">1976</td>
+                    <td class="number">10</td>
+                    <td>Smash it up</td>
+                </tr>
+                <tr>
+                    <th>Sex Pestols</th>
+                    <td class="number">1975</td>
+                    <td class="number">1</td>
+                    <td>Anarchy in the UK</td>
+                </tr>
+                <tr>
+                    <th>Sham 69</th>
+                    <td class="number">1976</td>
+                    <td class="number">13</td>
+                    <td>If the kids are inted</td>
+                </tr>
+                <tr>
+                    <th>Souxsie and the Banshees</th>
+                    <td class="number">11</td>
+                    <td class="number">1976</td>
+                    <td>Hong Kong Garden</td>
+                </tr>
+                <tr>
+                    <th>Stiff Little Fingers</th>
+                    <td class="number">1977</td>
+                    <td class="number">10</td>
+                    <td>Suspect Device</td>
+                </tr>
+                <tr>
+                    <th>The Stranglers</th>
+                    <td class="number">1974</td>
+                    <td class="number">17</td>
+                    <td>No More Heroes</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr style="text-align: center;">
+                    <th colspan="4">Total Albums 77</th>
+                </tr>
+            </tfoot>
+
+        </table>
+    </div>
+</body>
+
+</html>
