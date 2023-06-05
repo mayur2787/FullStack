@@ -1,61 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .container {
-            border: 1px solid gray;
-            padding: 20px;
-            width: 30%;
-            padding-top: 0;
-            padding-bottom: 30px;
-            height: 100px;
-        }
-
-        div>div {
-            width: 100px;
-            height: 100px;
-            border: 1px inset purple;
-            margin-left: 10px;
-
-        }
-
-        .float1 {
-            background-color: purple;
-            float: left;
-        }
-
-        .float3 {
-            background-color: purple;
-            float: right;
-        }
-
-         .float2{
-        display: inline-block;
-        margin-top: 10px;
-        width: 100px;
+     div{
+        border: 5px solid gray;
+        width: 40vw;
+        height: 50vh;
+        display: flex;
+        justify-content: left;
+        overflow:auto;
+     }
+     #sec-1{
+        margin: 10px;
+        width: 10vw;
+        height: 35vh;
+        background-color: purple;
+        position: fixed;
         padding: 10px;
-    } 
-    h4{
         color: aliceblue;
-        margin-left: 10px;
-    }
+     }
+     #sec-2{
+        margin-left: 180px;
+        padding: 10px;
+
+     }
     </style>
-
 </head>
-
 <body>
-    <div class="container">
-        <p>
-        <div class="float1"><h4>One</h4></div>
-        <p class="float2">The two boxes should float to either side of this text</p> 
-        <div class="float3"><h4>Two</h4></div>
-        </p>
+    <div>
+        <section id="sec-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias nemo fuga, odio dolorum natus minima. Ipsum tempore repellat, vel error similique minima, nemo laboriosam eius autem rem sunt ad maiores.</section>
+        <section id="sec-2">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, beatae. Nisi ipsum in rem aperiam, debitis dignissimos tempora. Pariatur nulla veniam necessitatibus tenetur nemo sunt fugiat facere voluptatum id dolore?</p>  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis aperiam culpa minus corrupti ipsa voluptatem quidem autem, doloribus officiis iure aspernatur beatae facere sit magni omnis natus ipsum ratione quod. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, libero. Beatae, ipsam ut quidem ipsum debitis fuga doloribus cupiditate veniam id laboriosam consectetur, porro, tenetur magnam eaque mollitia illo quas.</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus illum, cupiditate sit reprehenderit molestias quae maxime tenetur? Aperiam quo unde fuga ratione. Labore soluta iusto consectetur molestias, maiores dolore nemo.</p></section>
     </div>
 </body>
-
 </html>
