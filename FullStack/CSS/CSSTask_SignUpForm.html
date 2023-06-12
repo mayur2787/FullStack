@@ -6,15 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Francois+One&family=PT+Serif&family=Roboto:ital,wght@0,400;0,500;0,900;1,400;1,700&display=swap" rel="stylesheet">
     <style>
-        div {
+        .container {
 
             background-color: rgb(236, 236, 236);
-            margin: 50px 50px;
+            margin: 50px 50px 5px;
             padding: 30px;
+            font-family: 'Roboto', sans-serif;
+            color: #3d3c3c;
+        }
+        .footer
+        {
+            margin: auto;
+            width: 50%;
+            
         }
         section {
-            width: 40%;
+            width: 37.5%;
             padding: 10px;
             background-color: rgb(0, 126, 204);
             margin: auto;
@@ -23,14 +32,37 @@
             color: silver;
         }
         input{
-            //border: 1px solid  rgb(236, 236, 236);;
+            border: 1px solid  rgb(211, 219, 209);
+            background-color: rgb(230, 233, 226);
+            padding: 8px;
+        }
+        label a{
+            text-decoration: none;
+        }
+        p a{
+            color: aliceblue;
+        }
+        .sz{
+            width: 315px;
+        }
+        #submit{
+            width: 120px;
+            background-color: rgb(0, 126, 204);
+            color: aliceblue;
+            font-weight:700;
+        }
+        .name{
+            width: 147px;
+        }
+        #bottom{
+            color: white;
         }
     </style>
 </head>
 
 <body>
     <section>
-        <div>
+        <div class="container">
             <header>
                 <h1>Sign Up</h1>
                 <p>Please fill in this form to create an account</p>
@@ -38,32 +70,30 @@
             <hr>
             <main>
                 <p>
-                    <input type="text">
-                    <input type="text">
+                    <input type="text" placeholder="First Name" class="name">
+                    <input type="text" placeholder="Last Name" class="name">
                 </p>
                 <p>
-                    <input type="email">
+                    <input type="email" placeholder="E-mail" class="sz">
                 </p>
                 <p>
-                    <input type="password">
+                    <input type="password" placeholder="Password" class="sz">
                 </p>
                 <p>
-                    <input type="password">
+                    <input type="password" placeholder="Confirm password" class="sz">
                 </p>
 
                 <p>
                     <input type="checkbox" id="terms">
-                    <label for="terms"></label>
+                    <label for="terms">I accept the <a href="#">terms of use</a> & <a href="#">Privacy policy</a></label>
                 </p>
                 <p>
-                    <input type="submit" id="submit">
+                    <input type="submit" id="submit" value="Sign Up">
                 </p>
             </main>
-            <footer>
-
-            </footer>
         </div>
-
+        <div class="footer"><p id="bottom">Already have an account? <a href="#">Login here</a></p></div>
+            
     </section>
 
 </body>
