@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@600&family=Francois+One&family=PT+Serif&family=Roboto:ital,wght@0,400;0,500;0,900;1,400;1,700&display=swap");
+
+*{
+    font-family: 'Roboto', sans-serif;
+}
+header{
+    /* border: 1px solid brown; */
+    width: 70vw;
+    margin: auto;
+}
+p{
+    /* border:1px solid brown; */
+    float: left;
+    font-size: 1.8rem;
+}
+#sub-tag{
+    font-size: 0.7rem;
+    margin-left: 5px;
+}
+#online{
+    font-size: 0.8rem;
+    color: green;
+}
+.emp{
+    font-weight: 700;
+}
+#menu{
+    display: flex;
+    list-style-type: none;
+    gap: 25px;
+    justify-content: right;
+}
+li{
+    margin-top: 40px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+#search:focus{
+    appearance: none;
+    outline: none;
+}
+#search{
+    border: none;
+    background-color: silver;
+    border-radius: 15px;
+}
