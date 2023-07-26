@@ -1,8 +1,30 @@
 <?php
 $conn = new MySqli("localhost","root","","hotel");
-$query = "SELECT * FROM users";
+if(isset($_POST['signupbtn']))
+{
+  $insert = "INSERT INTO `users` (`name`,`uname`,`password`,`email`,`contact`,`gender`,`status`) VALUES ('".$_POST['name']."','".$_POST['uname']."','".$_POST['psw']."','".$_POST['email']."','".$_POST['contact']."','".$_POST['gender']."',1)";
+  $res = $conn->query($insert);
+  header("location:SgnUpForm.php");
+}
+if(isset($_GET['del']))
+{
+  $delete = "DELETE from `users` WHERE `id` = ".$_GET['del'];
+  $res = $conn->query($delete);
+  header("location:SgnUpForm.php");
+}
+if(isset($_GET['status']))
+{
+  $get_status = "SELECT `status` FROM `users` WHERE `id` = ".$_GET['status'];
+  $res = $conn->query($get_status);
+  $status = $res->status == 1?0:1;
+  $statusUpdate = "UPDATE TABLE `users` SET `status` = ".$status." WHERE `id` = ".$_GET['status'];
+  $res = $conn->query($statusUpdate);
+  header("location:SgnUpForm.php");
+}
+$query = "SELECT * FROM `users`";
 $res = $conn->query($query);
-// mysqli_result$res);
+
+
 
 ?>
 <!DOCTYPE html>
@@ -80,6 +102,21 @@ table{
   border:1px solid gray;
   margin:20px;
   width: 60vw;
+  background: #f1f1f1;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+
+th, td{
+  border:1px solid gray;
+  text-align:left;
+}
+h2{
+  font-size:2rem;
+  margin-left:20px;
+}
+a{
+  text-decoration:none;
 }
 
 
@@ -126,12 +163,13 @@ table{
 
     <div class="clearfix">
       <button type="button" class="cancelbtn">Cancel</button>
-      <button type="submit" name="submit" class="signupbtn">Sign Up</button>
+      <button type="submit" name="signupbtn" class="signupbtn">Sign Up</button>
     </div>
   </div>
 </form>
 <?php if(!empty($res)) { ?>
 <div class="data-container">
+  <h2>User List</h2>
   <table>
     <thead>
       <tr>
@@ -155,7 +193,11 @@ table{
         <td><?php echo $val['email']; ?></td>
         <td><?php echo $val['contact']; ?></td>
         <td><?php echo $val['gender'] == 1?"Male":"Female"; ?></td>
-        <td></td>
+        <td style="display:flex;justify-content:space-around;">
+        <a href="SgnUpForm.php?edit=<?php echo $val['id']; ?>">Edit</a>
+        <a href="SgnUpForm.php?del=<?php echo $val['id']; ?>">Delete</a>
+        <a href="SgnUpForm.php?status=<?php echo $val['id']; ?>"><?php echo $val['status'] == 1?"&nbsp;&nbsp;&nbsp;Active":"InActive"; ?></a>
+        </td>
       </tr> <?php } ?>
     </tbody>
   </table>
