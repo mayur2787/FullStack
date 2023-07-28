@@ -16,9 +16,20 @@ if(isset($_GET['status']))
 {
   $get_status = "SELECT `status` FROM `users` WHERE `id` = ".$_GET['status'];
   $res = $conn->query($get_status);
-  $status = $res->status == 1?0:1;
-  $statusUpdate = "UPDATE TABLE `users` SET `status` = ".$status." WHERE `id` = ".$_GET['status'];
-  $res = $conn->query($statusUpdate);
+  $row = $res->fetch_assoc();
+  $status = (isset($row['status']) && $row['status'] == 1)?0:1;
+  $statusUpdate = "UPDATE `users` SET `status` = ".$status." WHERE `id` = ".$_GET['status'];
+  $conn->query($statusUpdate);
+  header("location:SgnUpForm.php");
+}
+if(isset($_GET['edit']))
+{
+  $get_info = "SELECT `status` FROM `users` WHERE `id` = ".$_GET['edit'];
+  $res = $conn->query($get_info);
+  $row = $res->fetch_assoc();
+  $status = (isset($row['status']) && $row['status'] == 1)?0:1;
+  $statusUpdate = "UPDATE `users` SET `status` = ".$status." WHERE `id` = ".$_GET['status'];
+  $conn->query($statusUpdate);
   header("location:SgnUpForm.php");
 }
 $query = "SELECT * FROM `users`";
@@ -162,7 +173,7 @@ a{
     <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
 
     <div class="clearfix">
-      <button type="button" class="cancelbtn">Cancel</button>
+      <button type="reset" class="cancelbtn">Cancel</button>
       <button type="submit" name="signupbtn" class="signupbtn">Sign Up</button>
     </div>
   </div>
